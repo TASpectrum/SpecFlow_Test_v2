@@ -7,8 +7,10 @@ namespace SpecFlow_Test_v2.Aliases
 {
     public static class PageObjAlias
 	{
-		readonly static public string username = "testselenide @mail.ru";
+		readonly static public string username = "testselenide@mail.ru";
 		readonly static public string searchObject = "mail.ru";
+		readonly static public string tableAsStringUser = "Логин";
+		readonly static public string tableAsStringPassord = "Пароль";
 		readonly static public string url = "https://www.google.ru/";
 		readonly static public By googleFindString = By.Name("q");
 		readonly static public By googleFindButton = By.XPath("//input[@value='Поиск в Google']");
@@ -21,5 +23,7 @@ namespace SpecFlow_Test_v2.Aliases
 		readonly static public By singInButton = By.XPath("//button[@data-testid='login-to-mail']");
 		readonly static public By error_NullPassword = By.XPath("//div[text()='Введите пароль']");
 		readonly static public By error_IncorrectPassword = By.XPath("//div[text()='Неверное имя или пароль']");
+		readonly static public By userLabel = By.XPath("//div[@aria-label='testselenide@mail.ru']");
+		
     }
 }

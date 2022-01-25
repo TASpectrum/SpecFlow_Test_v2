@@ -41,8 +41,7 @@ namespace SpecFlow_Test_v2.Actions
         {
             try
             {
-                string[] username = table.AsStringArr("Логин");
-                string[] password = table.AsStringArr("Пароль");
+                Resolve.AuthData(table, out string[] username, out string[] password);
                 for (int i = 0; i < table.RowCount; i++)
                 {
                     bool visibleState = false;
@@ -79,10 +78,9 @@ namespace SpecFlow_Test_v2.Actions
 
         public static void LogInMailRu(Table table)
         {
-            string[] username = table.AsStringArr("Логин");
-            string[] password = table.AsStringArr("Пароль");
             try
             {
+                Resolve.AuthData(table, out string[] username, out string[] password);
                 for (int i = 0; i < table.RowCount; i++)
                 {
                     driver.Navigate().Refresh();
@@ -120,7 +118,7 @@ namespace SpecFlow_Test_v2.Actions
             try
             {
                 Thread.Sleep(1000);
-                Assert.IsTrue(driver.FindElement(By.XPath("//div[@aria-label='testselenide@mail.ru']")).Text.Contains(PageObjAlias.username));
+                Assert.IsTrue(driver.FindElement(PageObjAlias.userLabel).Text.Contains(PageObjAlias.username));
                 Console.WriteLine("\n----------------------------- Test Done -----------------------------\n");
             }
             catch (Exception ex)
