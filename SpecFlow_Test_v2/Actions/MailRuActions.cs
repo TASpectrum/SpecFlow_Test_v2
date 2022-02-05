@@ -120,7 +120,8 @@ namespace SpecFlow_Test_v2.Actions
             try
             {
                 Thread.Sleep(1000);
-                Assert.IsTrue(driver.FindElement(PageObjAlias.userLabel).Text.Contains(PageObjAlias.username));
+                string UserName = driver.FindElement(PageObjAlias.userLabel).GetAttribute("aria-label").ToString();
+                Assert.IsTrue(UserName == PageObjAlias.username);
                 Console.WriteLine("\n----------------------------- Test Done -----------------------------\n");
             }
             catch (Exception ex)
