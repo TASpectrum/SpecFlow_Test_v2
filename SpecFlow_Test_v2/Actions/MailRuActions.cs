@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System.Drawing;
 using SpecFlow_Test_v2.Aliases;
 using TechTalk.SpecFlow.Assist;
 
