@@ -23,7 +23,7 @@ namespace SpecFlow_Test_v2.Aliases
 		readonly static public By singInButton = By.XPath("//button[@data-testid='login-to-mail']");
 		readonly static public By error_NullPassword = By.XPath("//div[text()='Введите пароль']");
 		readonly static public By error_IncorrectPassword = By.XPath("//div[text()='Неверное имя или пароль']");
-		readonly static public By userLabel = By.XPath("//div[@data-testid='whiteline-accoun']");
+		readonly static public By userLabel = By.XPath("//div[@data-testid='whiteline-account']");
 		
     }
 }
