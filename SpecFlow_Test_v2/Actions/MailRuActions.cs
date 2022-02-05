@@ -13,7 +13,8 @@ namespace SpecFlow_Test_v2.Actions
 
         public static void OpenGoogle()
         {
-            driver.Manage().Window.Maximize();
+            //driver.Manage().Window.Maximize();
+            driver.Manage().Window.Size = new Size(1920, 1080);
             driver.Navigate().GoToUrl(PageObjAlias.url);  
         }
         public static void FindMailRuText()
